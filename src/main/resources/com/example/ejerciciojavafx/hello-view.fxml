@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane xmlns:fx="http://javafx.com/fxml/1" orientation="HORIZONTAL">
+    <items>
+        <VBox>
+            <TableView fx:id="userTable">
+                <columns>
+                    <TableColumn fx:id="emailColumn" text="Email"/>
+                    <TableColumn fx:id="platformColumn" text="Platform"/>
+                    <TableColumn fx:id="adminColumn" text="Admin"/>
+                    <TableColumn fx:id="versionColumn" text="Software Version"/>
+                    <TableColumn fx:id="createdAtColumn" text="Created At"/>
+                </columns>
+            </TableView>
+        </VBox>
+        <VBox spacing="10" padding="10">
+            <TextField fx:id="emailField" promptText="Email"/>
+            <TextField fx:id="platformField" promptText="Platform"/>
+            <CheckBox fx:id="adminCheckBox" text="Admin"/>
+            <Spinner fx:id="versionSpinner" initialValue="1" min="1" max="5"/>
+            <Button fx:id="addButton" text="Add User"/>
+        </VBox>
+    </items>
+</SplitPane>
